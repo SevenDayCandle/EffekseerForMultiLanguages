@@ -1,6 +1,7 @@
 ## Common
 
-Effekseer for C# and Java
+Effekseer for C# and Java.
+This fork of EffekseerForMultiLanguages adds a new wrapper function to access the SetAllColor method
 
 ### Requirements
 - git
@@ -13,7 +14,7 @@ Effekseer for C# and Java
 ### Clone
 
 ```
-git clone https://github.com/effekseer/EffekseerForMultiLanguages.git
+git clone https://github.com/SevenDayCandle/EffekseerForMultiLanguages.git
 cd EffekseerForMultiLanguages
 git submodule update --init
 ```
