@@ -1,6 +1,6 @@
 ## EffekseerForMultiLanguages
 
-Effekseer for C#,Java and Python.
+Effekseer for C#, Java and Python.
 This fork of EffekseerForMultiLanguages makes modifications to make it more suitable for https://github.com/SevenDayCandle/STS-Effekseer
 
 ### Requirements
