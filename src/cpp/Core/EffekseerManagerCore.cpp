@@ -231,6 +231,12 @@ void EffekseerManagerCore::SetShown(int handle, bool v)
 	return manager_->SetShown(handle,v);
 }
 
+void EffekseerManagerCore::SetAllColor(int handle, float r, float g, float b, float a)
+{
+    ::Effekseer::Color c=::Effekseer::Color(r,g,b,a);
+	manager_->SetAllColor(handle, c);
+}
+
 void EffekseerManagerCore::SetEffectPosition(int handle, float x, float y, float z)
 {
 	manager_->SetLocation(handle, x, y, z);

@@ -41,6 +41,8 @@ public:
 
 	void SetShown(int handle, bool v);
 
+	void SetAllColor(int handle, float r, float g, float b, float a);
+
 	void SetEffectPosition(int handle, float x, float y, float z);
 
 	void SetEffectRotation(int handle, float x, float y, float z);
