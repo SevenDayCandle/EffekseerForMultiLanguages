@@ -33,6 +33,12 @@ public:
 
 	int Play(EffekseerEffectCore* effect);
 
+	float GetFrame(int handle);
+
+	int GetInstanceCount(int handle);
+
+	int GetLayer(int handle);
+
 	void StopAllEffects();
 
 	void Stop(int handle);

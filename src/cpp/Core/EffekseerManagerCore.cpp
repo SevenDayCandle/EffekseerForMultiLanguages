@@ -216,6 +216,21 @@ int EffekseerManagerCore::Play(EffekseerEffectCore* effect)
 	return manager_->Play(effect->GetInternal(), ::Effekseer::Vector3D());
 }
 
+float EffekseerManagerCore::GetFrame(int handle)
+{
+	return manager_->GetFrame(handle); 
+}
+
+int EffekseerManagerCore::GetInstanceCount(int handle)
+{
+	return manager_->GetInstanceCount(handle); 
+}
+
+int EffekseerManagerCore::GetLayer(int handle)
+{ 
+	return manager_->GetLayer(handle); 
+}
+
 void EffekseerManagerCore::StopAllEffects()
 {
 	return manager_->StopAllEffects();
