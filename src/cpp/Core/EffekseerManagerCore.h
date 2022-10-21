@@ -83,6 +83,8 @@ public:
 									  float v10,
 									  float v11);
 
+	void Draw(int layer = 1);
+
 	void DrawBack(int layer=1);
 
 	void DrawFront(int layer=1);
@@ -126,6 +128,8 @@ public:
 	bool Exists(int handle);
 
 	void SetViewProjectionMatrixWithSimpleWindow(int32_t windowWidth, int32_t windowHeight);
+
+	void SetViewProjectionMatrixWithSimpleWindowAndUpdate(int32_t windowWidth, int32_t windowHeight, float deltaFrames);
 
 	void SetDynamicInput(int handle, int32_t index, float value);
 

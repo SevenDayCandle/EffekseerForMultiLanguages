@@ -287,6 +287,22 @@ void EffekseerManagerCore::SetPaused(int handle, bool v)
 	manager_->SetPaused(handle,v);
 }
 
+void EffekseerManagerCore::Draw(int layer)
+{
+	if (manager_ == nullptr)
+	{
+		return;
+	}
+
+	renderer_->BeginRendering();
+
+	Effekseer::Manager::DrawParameter params;
+	params.CameraCullingMask = layer;
+	manager_->Draw(params);
+
+	renderer_->EndRendering();
+}
+
 void EffekseerManagerCore::DrawBack(int layer)
 {
 	if (manager_ == nullptr)
@@ -367,6 +383,12 @@ void EffekseerManagerCore::SetViewProjectionMatrixWithSimpleWindow(int32_t windo
 	renderer_->SetCameraMatrix(::Effekseer::Matrix44().LookAtRH(::Effekseer::Vector3D(windowWidth / 2.0f, windowHeight / 2.0f, 200.0f),
 																::Effekseer::Vector3D(windowWidth / 2.0f, windowHeight / 2.0f, -200.0f),
 																::Effekseer::Vector3D(0.0f, 1.0f, 0.0f)));
+}
+
+void EffekseerManagerCore::SetViewProjectionMatrixWithSimpleWindowAndUpdate(int32_t windowWidth, int32_t windowHeight, float deltaFrames)
+{
+	SetViewProjectionMatrixWithSimpleWindow(windowWidth, windowHeight);
+	Update(deltaFrames);
 }
 
 	void EffekseerManagerCore::SetDynamicInput(int handle,int32_t index,float value){
